@@ -6,7 +6,7 @@ require 'exifr'
 require 'pp'
 
 def getDateTimefromEXIF(filename)
-	date = EXIFR::JPEG::new(filename).date_time.to_s()
+	date = EXIFR::JPEG::new(filename).date_time_original.to_s()
 	date.gsub!(/[\ |:]/, '-')
 	return date
 end
